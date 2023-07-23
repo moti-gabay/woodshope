@@ -25,7 +25,7 @@ const Home = () => {
   return (
     <div className="min-h-screen">
       <HomePage/>
-      <div className="text-center font-semibold mt-[5%] mb-[2%]">
+      <div className="text-center font-semibold mt-[5%] mb-[2%] text-blue-500">
         <h2 className='text-3xl sm:text-5xl lg:text-6xl mb-1 sm:mb-2'>Build By Your Own</h2>
         <h3 className='text-xl sm:text-3xl lg:text-4xl'>Choose Wood Type</h3>   
         <h3><SlArrowDown className='mx-auto mt-5 text-2xl sm:text-4xl lg:text-5xl'/> </h3>
