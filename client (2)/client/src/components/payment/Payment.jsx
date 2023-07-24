@@ -1,7 +1,10 @@
 import { PayPalButtons, PayPalScriptProvider } from "@paypal/react-paypal-js";
 import React from "react";
 
-const Payment = ({checkOut}) => {
+const Payment = () => {
+  const mailer = () => {
+
+  }
   return (
     <div>
       <PayPalScriptProvider
@@ -16,7 +19,7 @@ const Payment = ({checkOut}) => {
               purchase_units: [
                 {
                   amount: {
-                    value: "10.0",
+                    value: "1.0",
                   },
                 },
               ],
@@ -26,6 +29,7 @@ const Payment = ({checkOut}) => {
             const details = await actions.order.capture();
             const name = details.payer.name.given_name;
             console.log("pay...");
+            mailer()
             // checkOut();
           }}
         />
