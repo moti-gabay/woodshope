@@ -7,7 +7,8 @@ export const LOGIN_ROUTE = API_URL + "users/login";
 export const USER_INFO_ROUTE = API_URL + "users/getUserInfo";
 export const CHECK_TOKEN = API_URL + "users/checkToken";
 export const PRODUCT_LIST_ROUTE = API_URL + "products/productsList";
-export const MAILER_URL = "https://new-mailer.onrender.com/api/product/getbill";
+export const MAILER_URL = API_URL + "users/getBillToEmail";
+
 // admin
 export const USERS_LIST_ROUTE = API_URL + "users/usersList";
 export const DELETE_USER_ROUTE = API_URL + "users/delete/"

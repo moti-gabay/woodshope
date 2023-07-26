@@ -1,9 +1,10 @@
 const bcrypt = require("bcrypt");
-const { UserModel, validSignUp, validLogin, createToken } = require("../models/userModel");
-const { config } = require("./config/secret");
-const { config } = require("dotenv");
-const { config } = require("../config/secret");
+require("dotenv").config();
+const nodemailer = require("nodemailer");
 
+const { UserModel, validSignUp, validLogin, createToken } = require("../models/userModel");
+const Mailgen = require("mailgen");
+// const {config} = require("../config/secret")
 
 exports.userReq = {
     signUp: async(req,res) => {
@@ -65,10 +66,12 @@ exports.userReq = {
         res.json({status:true});
     },
     getbill: async (req, res) => {
+      const {config} = require("../config/secret")
+
       console.log("get bill");
-      const { email } = req.body;
+      const { user } = req.body;
     
-      let config = {
+      let confige = {
         service: "gmail",
         auth: {
           user: config.EMAIL_ADMIN,
@@ -76,7 +79,7 @@ exports.userReq = {
         },
       };
     
-      let transporter = nodemailer.createTransport(config);
+      let transporter = nodemailer.createTransport(confige);
     
       let MailGenerator = new Mailgen({
         theme: "default",
@@ -88,7 +91,7 @@ exports.userReq = {
     
       let response = {
         body: {
-          name: "my client",
+          name: user.name,
           intro: "Your bill has arrived",
           table: {
             data: [

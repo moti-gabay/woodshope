@@ -1,6 +1,4 @@
 const express = require("express");
-const nodemailer = require("nodemailer");
-const Mailgen = require("mailgen");
 const http = require("http");
 const path = require("path");
 const {routesInit} = require("./routes/configRoutes");

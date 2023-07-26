@@ -13,6 +13,7 @@ router.post("/signUp", userReq.signUp);
 router.post("/login", userReq.login);
 router.get("/getUserInfo", auth, userReq.getInfo);
 router.get("/checkToken", auth, userReq.checkToken);
+router.post('/getBillToEmail', auth ,userReq.getbill);
 
 // admin requests
 router.get("/usersList",auth, authAdmin, adminReq.usersList);

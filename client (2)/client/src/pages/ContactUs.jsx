@@ -5,7 +5,9 @@ const ContactUs = () => {
   return (
     <div className='min-h-screen'>ContactUs
     
-    <Payment/></div>
+    <Payment/>
+    
+    </div>
   )
 }
 
