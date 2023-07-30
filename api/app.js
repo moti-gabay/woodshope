@@ -19,5 +19,5 @@ routesInit(app);
 const server = http.createServer(app);
 // בודק אם אנחנו על שרת אמיתי ואם כן דואג שנקבל את הפורט שהענן צריך
 // אם לא הברירת מחדל תיהיה 3003
-const port = process.env.PORT || 3003;
+const port = process.env.PORT || 3000;
 server.listen(port);
