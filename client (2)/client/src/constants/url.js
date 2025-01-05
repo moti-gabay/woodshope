@@ -1,4 +1,4 @@
-const API_URL = 'http://localhost:3003/';
+const API_URL = 'https://wood-store-server-d473d1ad4293.herokuapp.com/';
 
 export const TOKEN_KEY = "token";
 // user
